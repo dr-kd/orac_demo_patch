@@ -1,9 +1,16 @@
 {
-    "display" : "Empty",
-    "parameters" :  [ 
+    "display" : "Demo Patch",
+    "parameters" :  [
+	[ "pitch", "var1", "Line 1", 0, 127, 60],
+	[ "int", "var2", "Line 2", 0, 3, 0],
+	[ "time", "var3", "Line 3", 0, 5000, 500],
+	[ "freq", "var4", "Line 4", 20, 20000, 440 ],
+	[ "float", "var5", "Line 5", 0.01, 1.01, 0.53 ],
+	[ "bool", "var6", "Line 6", 0 ]
     ],
     "pages" : [ 
-        ["pg_main",[]]
+        ["pg_one","Page one", ["var1", "var2", "var3", "var4"]],
+        ["pg_two","Page two", ["var5", "var6"]]
     ]
 }
 
