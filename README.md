@@ -120,3 +120,24 @@ Now we're left with an empty patch that discards audio input, receives midi inpu
 
 At this point we've demoed a bare minimum module with all the data types (except pan as I don't understand that one) available in the menu that does nothing.  I guess in lesson two we're going to have to do something real.
 
+## Distributing the patch
+
+While this patch does nothing it's a good time to describe how to distribute it.
+
+
+First create a deploy.sh script:
+
+    oscsend localhost 4001 /oled/aux/line/2 s "installing"
+    oscsend localhost 4001 /oled/aux/line/3 s "orac module"
+    cd ..
+    mv $1 /usbdrive/media/orac/usermodules/dev
+    exit 1
+
+
+Note the penultimate line - this is where you want the module to end up on the file system.
+
+In the folder `/usbdrive/media/orac/usermodules/dev`, issue the following command at the terminal:
+
+     ~/scripts/create_install_package.sh demo
+
+This will output a demo.zop file you can distribute to others.
