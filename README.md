@@ -9,12 +9,12 @@ Knowledge:
 * You need to know something about how puredata works.
 * You need to know what json is.
 * You need to understand files and folders, how to use a text editor and how to use VNC.
-* My own workflow is very terminal heavy on using the terminal.  I'm going to assume you know what that means and how relates to your own preferred workflow.  I use the terminal by ssh but you can use it in VNC too.  In fact you can use the organelle as a desktop environment.
+* My own workflow is very heavy on using the terminal.  I'm going to assume you know what that means and how relates to your own preferred workflow.  I use the terminal by ssh but you can use it in VNC too.  In fact you can use the organelle as a desktop environment.
 
 ## Startup
 
 * Connect your organelle to wifi and start VNC.  Start your VNC client and connect on your computer.
-*Keep VNC running for this whole tutorial
+* Keep VNC running for this whole tutorial
 
 ## Basic mostly minimal orac patch
 
@@ -84,29 +84,29 @@ So here for each page, we have a unique label for the page (like a
 variable name), the Display name of the page, and then a list of the
 up to four parameters for that page.
 
-So now the entire module.json looks as follows:
+Now the entire module.json looks as follows:
 
-{
-    "display" : "Demo Patch",
-    "parameters" :  [
-	[ "pitch", "var1", "Line 1", 0, 127, 60],
-	[ "int", "var2", "Line 2", 0, 3, 0],
-	[ "time", "var3", "Line 3", 0, 5000, 500],
-	[ "freq", "var4", "Line 4", 20, 20000, 440 ],
-	[ "float", "var5", "Line 5", 0.01, 1.01, 0.53 ],
-	[ "bool", "var6", "Line 6", 0 ]        
-    ],
-    "pages" : [ 
-        ["pg_one","Page one", ["var1", "var2", "var3", "var4"]],
-        ["pg_two","Page two", ["var5", "var6"]]
-    ]
-}
+    {
+        "display" : "Demo Patch",
+        "parameters" :  [
+        [ "pitch", "var1", "Line 1", 0, 127, 60],
+        [ "int", "var2", "Line 2", 0, 3, 0],
+        [ "time", "var3", "Line 3", 0, 5000, 500],
+        [ "freq", "var4", "Line 4", 20, 20000, 440 ],
+        [ "float", "var5", "Line 5", 0.01, 1.01, 0.53 ],
+        [ "bool", "var6", "Line 6", 0 ]        
+        ],
+        "pages" : [ 
+            ["pg_one","Page one", ["var1", "var2", "var3", "var4"]],
+            ["pg_two","Page two", ["var5", "var6"]]
+        ]
+    }
 
 -- commit two here "basic demo modules.json"
 
 So now if you reload the storage on the organelle, reload orac (load another patch, load orac then load the demo module into slot A1) then you'll see the display components for the patch.
 
-If you don't see then then your JSON is wrong.  Use a json validator like the one https://jsonlint.com/, or if you know how, `apt-get install` jq on your organelle.
+If you don't see then then your JSON is wrong.  Use a json validator like the one https://jsonlint.com/, or if you know how, `apt-get install jq` on your organelle.
 
 ## Now the patch itself.
 
@@ -118,7 +118,7 @@ Now we're left with an empty patch that discards audio input, receives midi inpu
 
 -- commit three.  strip down the empty patch module.pd
 
-At this point we've demoed a bare minimum module with all the data types (except pan as I don't understand that one) available in the menu that does nothing.  I guess in lesson two we're going to have to do something real.
+At this point we have a demo of a bare minimum module with most of the data types shown in the menu, otherwise it's just like the emoty patch.  We'll use this as the basis of doing something real in the next chapter.
 
 ## Distributing the patch
 
