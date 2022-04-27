@@ -14,7 +14,7 @@ You will also probably want to run puredata on a more conventional computer.  I 
 
 Knowledge:
 
-* You need to know something about how puredata works.
+* You need to know something about how puredata and how to use it.  My knowledge is limited, and it is a bit of a mental shift from other programming languages I've been exposed to.
 * You need to know what json is.
 * You need to understand files and folders, how to use a text editor and how to use VNC.
 * My own workflow is very heavy on using the terminal.  I'm going to assume you know what that means and how relates to your own preferred workflow.  I use the terminal by ssh but you can use it in VNC too.  In fact you can use the organelle as a desktop environment.
@@ -26,10 +26,7 @@ Knowledge:
 
 ## Contents
 
-- 00_basic_parameters
-
-This covers getting parameters visible on the screen and ready to be received by your patch.
-
--- 01_full_patch
-
-This covers converting a patch from the puredata examples to an orac patch.
+1. [The basics - accessing parameters](00_basics_parameters/README.md)
+   - This covers getting parameters visible on the screen and ready to be received by your patch.
+2. [Full patch](01_full_patch/README.md)
+   - This covers converting a patch from the puredata examples to an orac patch.

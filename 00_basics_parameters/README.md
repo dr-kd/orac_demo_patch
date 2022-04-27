@@ -19,12 +19,12 @@ Now we're ready to set up the parameters received by the patch.  Open up the fil
 
     {
         "display" : "Empty",
-    "parameters" :  [ 
-    ],
-    "pages" : [ 
-        ["pg_main",[]]
-    ]
-}
+        "parameters" :  [ 
+        ],
+        "pages" : [ 
+            ["pg_main",[]]
+        ]
+    }
 
 Each parameter received by the patch goes into a list The format is going to look something like this:
 
@@ -52,7 +52,7 @@ So in our new patch we can add the following parameters:
 	[ "time", "var3", "Line 3", 0, 5000, 500],
 	[ "freq", "var4", "Line 4", 20, 20000, 440 ],
 	[ "float", "var5", "Line 5", 0.01, 1.01, 0.53 ],
-	[ "bool", "var6", "Line 5", 0 ]		
+	[ "bool", "var6", "Line 6", 0 ]		
 
 
 Following this under pages we describe the display order
