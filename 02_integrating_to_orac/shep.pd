@@ -1,0 +1,108 @@
+#N canvas 69 23 599 855 12;
+#X floatatom 169 410 0 0 0 0 - - - 0;
+#X floatatom 169 336 0 0 0 0 - - - 0;
+#X floatatom 190 193 0 0 0 0 - - - 0;
+#X obj 168 145 metro 50;
+#X floatatom 168 263 5 0 0 0 - - - 0;
+#X obj 168 240 +;
+#X floatatom 169 489 0 0 0 0 - - - 0;
+#X obj 228 235 f;
+#X obj 228 258 mod 10000;
+#X obj 168 217 f;
+#X obj 289 589 rev2~, f 18;
+#X text 21 7 SHEPARD TONE;
+#X text 354 865 updated for Pd version 0.37;
+#X text 123 703 This patch is a bank of 20 sinusoids \, arranged so
+that their frequencies sweep upward or downward in parallel \, and
+their amplitudes fade in and out so that each one is quiet when it
+wraps around from one end to the other. The overall "phase" computed
+here is added to each voice's relative phase (its creation argument).
+The "incr" parameter controls how fast the phase changes \, "dropoff"
+the slope at which the amplitudes fall off at the ends \, "pitch" the
+center pitch of the cluster \, "interval" the number of (tenths of
+halftones) between successive voices \, and "rev" and "revtime" the
+reverberator at bottom.;
+#X obj 12 659 outlet~;
+#X obj 119 8 inlet;
+#X obj 172 309 inlet;
+#X obj 213 386 inlet;
+#X obj 211 464 inlet;
+#X obj 250 169 inlet;
+#X obj 89 659 outlet~;
+#X obj 169 433 f;
+#X obj 225 435 s \$0-pitch;
+#X msg 465 245 84;
+#X msg 518 245 87;
+#X obj 12 102 shepvoice 0 \$0;
+#X obj 12 125 shepvoice 500 \$0;
+#X obj 12 148 shepvoice 1000 \$0;
+#X obj 12 171 shepvoice 1500 \$0;
+#X obj 12 194 shepvoice 2000 \$0;
+#X obj 12 217 shepvoice 2500 \$0;
+#X obj 12 240 shepvoice 3000 \$0;
+#X obj 12 263 shepvoice 3500 \$0;
+#X obj 12 286 shepvoice 4000 \$0;
+#X obj 12 309 shepvoice 4500 \$0;
+#X obj 12 332 shepvoice 5000 \$0;
+#X obj 12 355 shepvoice 5500 \$0;
+#X obj 12 378 shepvoice 6000 \$0;
+#X obj 12 401 shepvoice 6500 \$0;
+#X obj 12 424 shepvoice 7000 \$0;
+#X obj 12 447 shepvoice 7500 \$0;
+#X obj 12 470 shepvoice 8000 \$0;
+#X obj 12 493 shepvoice 8500 \$0;
+#X obj 12 516 shepvoice 9000 \$0;
+#X obj 12 539 shepvoice 9500 \$0;
+#X obj 169 359 s \$0-dropoff;
+#X obj 168 284 s \$0-phase;
+#X obj 169 512 s \$0-interval;
+#X text 169 9 metro and reverb trigger;
+#X text 291 169 incr;
+#X text 215 307 dropoff;
+#X text 253 387 pitch;
+#X text 255 463 interval;
+#X connect 0 0 21 0;
+#X connect 1 0 45 0;
+#X connect 2 0 9 1;
+#X connect 3 0 9 0;
+#X connect 4 0 46 0;
+#X connect 5 0 7 0;
+#X connect 5 0 4 0;
+#X connect 6 0 47 0;
+#X connect 7 0 8 0;
+#X connect 8 0 5 1;
+#X connect 9 0 5 0;
+#X connect 10 0 14 0;
+#X connect 10 1 20 0;
+#X connect 15 0 24 0;
+#X connect 15 0 23 0;
+#X connect 15 0 3 0;
+#X connect 16 0 1 0;
+#X connect 17 0 0 0;
+#X connect 18 0 6 0;
+#X connect 19 0 2 0;
+#X connect 21 0 22 0;
+#X connect 23 0 10 1;
+#X connect 24 0 10 2;
+#X connect 25 0 26 0;
+#X connect 26 0 27 0;
+#X connect 27 0 28 0;
+#X connect 28 0 29 0;
+#X connect 29 0 30 0;
+#X connect 30 0 31 0;
+#X connect 31 0 32 0;
+#X connect 32 0 33 0;
+#X connect 33 0 34 0;
+#X connect 34 0 35 0;
+#X connect 35 0 36 0;
+#X connect 36 0 37 0;
+#X connect 37 0 38 0;
+#X connect 38 0 39 0;
+#X connect 39 0 40 0;
+#X connect 40 0 41 0;
+#X connect 41 0 42 0;
+#X connect 42 0 43 0;
+#X connect 43 0 44 0;
+#X connect 44 0 10 0;
+#X connect 44 0 14 0;
+#X connect 44 0 20 0;

@@ -1,0 +1,46 @@
+# Final re-integration of abstraction back to orac.
+
+It's at this stage you are likely to want to be working on your organelle via VNC.
+
+## Copy the files we need in.
+
+First thing is to copy three files `deploy.sh` `module.json` and `module.pd`into this directory from the [basic paramaters](../00_basics_parameters/README.md) tutorial as well as the `shep.pd` and `shepvoice.pd` files from the [converting to an abstraction](../01_full_patch/README.md) tutorial.
+
+## Modify module.json
+
+From the previous tutorial our important paramesters are as below (with the data type and my best guess of the range in parentheses)
+
+* dropoff (int - 1 to 40, default 10)
+* pitch (int - 20 to 240, default 60)
+* interval (int 20 to 240, defaul 120)
+* incr (int -10 to +10, default -2)
+
+The start parameter can be handled by the orac aux button, so we don't have to worry about that one yet.  It looks like the pitch parameter is midi note, but why that is is hidden in a formula in the ~shep.pd~ subpatch.  The modidified contents of `module.json` are below:
+
+    {
+        "display" : "Shepard tone",
+        "parameters" :  [
+    	[ "int", "doff", "Dropoff", 0, 127, 60],
+    	[ "int", "pitch", "Pitch", 0, 3, 0],
+    	[ "int", "ivl", "Interval", 0, 5000, 500],
+    	[ "int", "incr", "Increment", 20, 20000, 440 ]
+        ],
+        "pages" : [ 
+            ["pg_one","Page one", ["doff", "pitch", "ivl", "incr"]],
+        ]
+    }
+
+##  Add the abstraction into the patch
+
+This is pretty simple at this stage.  Add the shepard tone and put in the receive parameters we just defined:
+
+![module.pd](module_pd.png)
+
+At this point if we update orac on the organelle as described in the [first](../00_basics_parameters/README.md) everything should just work when we press the aux button.
+
+## Distributing the patch
+
+We can create the (deploy.sh)[/../00_basics_parameters/deploy.sh] script from before and modify it
+
+And then create the `.zop` file as described 
+

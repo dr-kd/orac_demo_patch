@@ -123,3 +123,6 @@ In the folder `/usbdrive/media/orac/usermodules/dev`, issue the following comman
      ~/scripts/create_install_package.sh demo
 
 This will output a demo.zop file you can distribute to others.
+
+Now proceed to the [making an abstraction](../01_making_an_abstraction/README.md) part of the tutorial.
+

@@ -1,0 +1,13 @@
+{
+    "display" : "Shepard tone",
+    "parameters" :  [
+	[ "int", "doff", "Dropoff", 0, 127, 60],
+	[ "int", "pitch", "Pitch", 0, 3, 0],
+	[ "int", "ivl", "Interval", 0, 5000, 500],
+	[ "int", "incr", "Increment", 20, 20000, 440 ]
+    ],
+    "pages" : [ 
+        ["pg_one","Page one", ["doff", "pitch", "ivl", "incr"]],
+    ]
+}
+

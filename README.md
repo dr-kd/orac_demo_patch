@@ -28,5 +28,8 @@ Knowledge:
 
 1. [The basics - accessing parameters](00_basics_parameters/README.md)
    - This covers getting parameters visible on the screen and ready to be received by your patch.
-2. [Full patch](01_full_patch/README.md)
+2. [Full patch](01_making_an_abstraction/README.md)
    - This covers converting a patch from the puredata examples to an orac patch.
+3. [Finishing up](02_integrating_to_orac/README.md)
+   - This covers finishing up.
+

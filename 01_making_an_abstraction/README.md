@@ -99,3 +99,6 @@ So inside the shepvoice sub-abstraction, the memory address of the main patch is
 ![Abstracting the sub abstraction](shepvoice.png)
 
 
+# Step 5.  Done
+
+So now we can use the test patch provided to check everything works.  And then proceed to the [integrating to orac](../02_integrating_to_orac/README.md).
