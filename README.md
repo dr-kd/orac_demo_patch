@@ -1,6 +1,6 @@
 # What is this?
 
-This is an attempt to provide some instructional documentation on writing patches for orac, the Pure Data based modular synth rack. [[ link to orac here ]]
+This is an attempt to provide some instructional documentation on writing patches for orac, the Pure Data based modular synth rack.  See [Patchstorage](https://patchstorage.com/platform/orac/) for a bunch of patches and links to orac's github repo.
 
 I've got an organelle so this is based on using the organelle iteslf as the development environment.
 
@@ -12,7 +12,7 @@ This is written for Orac 2.0 on the organelle.
 
 You will also probably want to run puredata on a more conventional computer.  I would like to see instructions for running orac on a laptop/workstation hopefully if someone else doesn't get around to it, I might.
 
-Knowledge:
+Required Knowledge:
 
 * You need to know something about how puredata and how to use it.  My knowledge is limited, and it is a bit of a mental shift from other programming languages I've been exposed to.
 * You need to know what json is.
